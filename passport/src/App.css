@@ -1,0 +1,169 @@
+.form-subcontainer {
+  display: flex;
+  flex-direction: column;
+  padding: 28px;
+  gap: 50px;
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+}
+
+.title-name-container {
+  display: flex;
+  font-size: 18px;
+  gap: 12px;
+}
+
+.user-container {
+  width: 100%;
+  flex-direction: column;
+  padding: 28px;
+  gap: 50px;
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+}
+
+.user-subcontainer {
+  display: flex;
+  font-size: 18px;
+  gap: 12px;
+}
+
+.user-cap {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.user-info-name {
+  margin-left: 15px;
+}
+
+.user-info-deep-con {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 200px;
+  gap: 120px;
+}
+
+.checkbox-round {
+  width: 1.3em;
+  height: 1.3em;
+  background-color: white;
+  border-radius: 50%;
+  vertical-align: middle;
+  border: 1px solid #ddd;
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.checkbox-round:checked {
+  background-color: rgb(33, 44, 204);
+}
+
+.star {
+  color: red;
+  font-size: 16px;
+  margin-right: 7px;
+}
+
+.phone-con {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.mobile-number {
+  display: flex;
+  gap: 5px;
+}
+
+.mobile-phone {
+  width: 100px;
+}
+
+.birth-nation {
+  display: flex;
+  gap: 12px;
+}
+
+.gender-con {
+  display: flex;
+}
+
+.salary-button {
+  display: flex;
+  gap: 12px;
+}
+
+.submit-con {
+  display: flex;
+  gap: 12px;
+}
+
+.salary-con {
+  display: flex;
+  gap: 12px;
+}
+
+.nationality {
+  display: flex;
+}
+
+.user-info {
+  display: flex;
+}
+
+.undo-cancel {
+  font-size: 0.875rem;
+  min-width: 64px;
+  box-sizing: border-box;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 500;
+  line-height: 1.75;
+  border-radius: 4px;
+  letter-spacing: 0.02857em;
+  text-transform: uppercase;
+  color: #f50057;
+  border: 1px solid #f50057;
+  background-color: #ffffff;
+}
+
+.undo-cancel-label {
+  cursor: pointer;
+  width: 100%;
+  display: inherit;
+  align-items: inherit;
+  justify-content: inherit;
+}
+
+.submit-edit {
+  font-size: 0.875rem;
+  min-width: 64px;
+  box-sizing: border-box;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 500;
+  line-height: 1.75;
+  border-radius: 4px;
+  letter-spacing: 0.02857em;
+  text-transform: uppercase;
+  color: #3f51b5;
+  border: 1px solid rgba(63, 81, 181, 0.5);
+  background-color: #ffffff;
+}
+
+.submit-edit-label {
+  cursor: pointer;
+  width: 100%;
+  display: inherit;
+  align-items: inherit;
+  justify-content: inherit;
+}
