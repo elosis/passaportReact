@@ -11,6 +11,21 @@ export default function PasProvider(props) {
   const [nationality, setNationality] = useState("Afghanistan");
   const [users, setUsers] = useState([]);
   const [title, setTitle] = useState("Mr");
+  const [citizen, setCitizen] = useState("");
+  const [passaport, setPassaport] = useState("");
+  const [salary, setSalary] = useState("");
+
+  const handleReset = () => {
+    setFirstName("");
+    setLastName("");
+    setSelectedGender("");
+    setPhone("");
+    setCitizen("");
+    setNationality("Afghanistan");
+    setTitle("Mr");
+    setPassaport("");
+    setSalary("");
+  };
 
   const handleTitleChange = (event) => {
     setTitle(event.target.value);
@@ -37,6 +52,18 @@ export default function PasProvider(props) {
     setPhone(event.target.value);
   };
 
+  const handleSalaryChange = (event) => {
+    setPhone(event.target.value);
+  };
+
+  const handlePassaportChange = (event) => {
+    setPassaport(event.target.value);
+  };
+
+  const handleCitizenChange = (event) => {
+    setCitizen(event.target.value);
+  };
+
   const handleNationalityChange = (event) => {
     const value = event.target.value;
     setNationality(value);
@@ -45,10 +72,6 @@ export default function PasProvider(props) {
   const addUser = (user) => {
     setUsers((prevUsers) => [...prevUsers, user]);
   };
-
-  // const deletedUser = () => {
-  //   setUsers((prevUsers) => [!prevUsers]);
-  // };
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -59,6 +82,9 @@ export default function PasProvider(props) {
         gender: selectedGender,
         phone: phone,
         nationality: nationality,
+        citizen: citizen,
+        passaport: passaport,
+        salary: salary,
       };
       addUser(user);
       setFirstName("");
@@ -66,9 +92,18 @@ export default function PasProvider(props) {
       setPhone("");
       setSelectedGender(null);
       setNationality("");
+      setCitizen("");
+      setPassaport("");
+      setSalary("");
     }
-    setGender("");
+    setFirstName("");
+    setLastName("");
     setPhone("");
+    setSelectedGender(null);
+    setNationality("");
+    setCitizen("");
+    setPassaport("");
+    setSalary("");
   };
 
   const data = {
@@ -97,7 +132,16 @@ export default function PasProvider(props) {
     handleNationalityChange,
     handleFirstNameChange,
     handleLastNameChange,
-    // deletedUser,
+    handleReset,
+    citizen,
+    setCitizen,
+    handleCitizenChange,
+    passaport,
+    setPassaport,
+    handlePassaportChange,
+    salary,
+    setSalary,
+    handleSalaryChange,
   };
 
   return (

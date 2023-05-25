@@ -39,6 +39,10 @@
   margin-left: 15px;
 }
 
+.passaport-input {
+  margin-left: 6px;
+}
+
 .user-info-deep-con {
   display: flex;
   justify-content: space-between;
