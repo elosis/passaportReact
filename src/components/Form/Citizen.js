@@ -8,7 +8,12 @@ export default function Citizen() {
     <div className="citizen-con">
       <div className="citizen">
         Citizen ID :
-        <input type="text" value={citizen} onChange={handleCitizenChange} />
+        <input
+          placeholder="X-XXXX-XXXXX-XX-X"
+          type="text"
+          value={citizen}
+          onChange={handleCitizenChange}
+        />
       </div>
     </div>
   );

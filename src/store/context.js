@@ -61,21 +61,19 @@ export default function PasProvider(props) {
   };
 
   const handleCitizenChange = (event) => {
-    const value = event.target.value;
-
-    // Remove any non-alphanumeric characters from the input
-    const alphanumericOnly = value.replace(/[^a-zA-Z0-9]/g, "");
-
-    // Format the input as "X-XXXX-XXXX-XX-X"
+    let value = event.target.value;
+    // Remove any non-alphanumeric characters
+    value = value.replace(/[^a-zA-Z0-9]/g, "");
+    // Restrict the value to a maximum of 15 characters
+    value = value.slice(0, 13);
+    // Format the value as X-XXXX-XXXXX-XX-X
     let formattedValue = "";
-    for (let i = 0; i < alphanumericOnly.length; i++) {
-      if (i === 1 || i === 5 || i === 10 || i === 13 || i === 13) {
+    for (let i = 0; i < value.length; i++) {
+      if (i === 1 || i === 5 || i === 10 || i === 12 || i === 13) {
         formattedValue += "-";
       }
-      formattedValue += alphanumericOnly[i];
+      formattedValue += value[i];
     }
-
-    // Update the citizen state with the formatted value
     setCitizen(formattedValue);
   };
 
