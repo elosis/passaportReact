@@ -97,6 +97,11 @@ export default function PasProvider(props) {
     setUsers((prevUsers) => [...prevUsers, user]);
   };
 
+  const handleDelete = () => {
+    const updatedUsers = users.filter((user) => user.id !== user.id);
+    setUsers(updatedUsers);
+  };
+
   const handleSubmit = (event) => {
     event.preventDefault();
 
@@ -119,6 +124,8 @@ export default function PasProvider(props) {
       citizen: citizen,
       passaport: passaport,
       salary: salary,
+      birthday: birthday,
+      title: title,
     };
 
     addUser(user);
@@ -187,6 +194,7 @@ export default function PasProvider(props) {
     setSubmitted,
     birthday,
     setBirthday,
+    handleDelete,
   };
 
   return (

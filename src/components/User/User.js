@@ -3,7 +3,20 @@ import "../../App.css";
 import { PasContext, useContext } from "../../store/context";
 
 export default function User() {
-  const { users } = useContext(PasContext);
+  const {
+    users,
+    setSelectedGender,
+    setFirstName,
+    setLastName,
+    setPhone,
+    setNationality,
+    setBirthday,
+    setTitle,
+    setCitizen,
+    setSalary,
+    setPassaport,
+    handleDelete,
+  } = useContext(PasContext);
   return (
     <div className="user-container">
       <div className="user-cap">User</div>
@@ -34,14 +47,22 @@ export default function User() {
               <div className="edit-con">
                 <button
                   className="submit-edit"
-                  // onClick={handleEdit}
+                  onClick={() => {
+                    setSelectedGender(user.gender);
+                    setFirstName(user.firstName);
+                    setLastName(user.lastName);
+                    setPhone(user.phone);
+                    setNationality(user.nationality);
+                    setBirthday(user.birthday);
+                    setTitle(user.title);
+                    setCitizen(user.citizen);
+                    setSalary(user.salary);
+                    setPassaport(user.passaport);
+                  }}
                 >
                   <span className="submit-edit-label">EDIT</span>
                 </button>
-                <button
-                  className="undo-cancel"
-                  // onClick={handleDelete}
-                >
+                <button className="undo-cancel" onClick={handleDelete}>
                   <span className="undo-cancel-label">DELETE</span>
                 </button>
               </div>
