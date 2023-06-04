@@ -137,6 +137,7 @@ export default function PasProvider(props) {
     setCitizen("");
     setPassaport("");
     setSalary("");
+    setBirthday("");
   };
 
   // const formatNumber = (value) => {
