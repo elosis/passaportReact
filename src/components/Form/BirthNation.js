@@ -2,14 +2,28 @@ import React from "react";
 import "../../App.css";
 import { PasContext, useContext } from "../../store/context";
 
-export default function Title() {
-  const { nationality, handleNationalityChange } = useContext(PasContext);
+export default function BirthNation() {
+  const {
+    nationality,
+    handleNationalityChange,
+    birthday,
+    handleBirthdayChange,
+    submitted,
+  } = useContext(PasContext);
 
   return (
     <div className="birth-nation">
       <div className="birthday">
         Birthday :<span className="star"> *</span>
-        <input type="date" id="date" name="date" />
+        <input
+          type="date"
+          value={birthday}
+          onChange={handleBirthdayChange}
+          className={submitted && birthday === "" ? "error" : ""}
+        />
+        {submitted && birthday === "" && (
+          <p className="error-message">Birthday is required.</p>
+        )}
       </div>
       <div className="nationality">
         Nationality :

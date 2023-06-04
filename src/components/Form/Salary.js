@@ -3,7 +3,7 @@ import "../../App.css";
 import { PasContext, useContext } from "../../store/context";
 
 export default function Salary() {
-  const { salary, setSalary } = useContext(PasContext);
+  const { salary, handleSalaryChange, submitted } = useContext(PasContext);
 
   return (
     <div className="salary-con">
@@ -12,11 +12,14 @@ export default function Salary() {
         <input
           type="number"
           value={salary}
-          onChange={(event) => {
-            setSalary(event.target.value);
-          }}
+          onChange={handleSalaryChange}
           step=".01"
+          placeholder="X.XXX.XXX,XX"
+          className={submitted && salary === "" ? "error" : ""}
         />
+        {submitted && salary === "" && (
+          <p className="error-message">Salary is required.</p>
+        )}
       </div>
     </div>
   );

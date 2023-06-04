@@ -31,6 +31,20 @@ export default function User() {
               <div className="user-info-gender">{user.gender}</div>
               <div className="user-info-phone">{user.phone}</div>
               <div className="user-info-nationality">{user.nationality}</div>
+              <div className="edit-con">
+                <button
+                  className="submit-edit"
+                  // onClick={handleEdit}
+                >
+                  <span className="submit-edit-label">EDIT</span>
+                </button>
+                <button
+                  className="undo-cancel"
+                  // onClick={handleDelete}
+                >
+                  <span className="undo-cancel-label">DELETE</span>
+                </button>
+              </div>
             </div>
           </div>
         </div>
