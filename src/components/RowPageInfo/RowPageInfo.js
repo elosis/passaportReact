@@ -1,14 +1,22 @@
 import React from "react";
 import "../../App.css";
+import { PasContext, useContext } from "../../store/context";
 
 export default function RowPageInfo() {
+  const { row, handleRow } = useContext(PasContext);
   return (
     <div className="row">
       <div className="row-con">
         <div className="row-spacer"></div>
         <p className="row-caption">Rows per page: </p>
         <div className="row-input">
-          <div className="row-select">5</div>
+          <div className="row-select">
+            <select value={row} onChange={handleRow}>
+              <option value="5">5</option>
+              <option value="10">10</option>
+              <option value="15">15</option>
+            </select>
+          </div>
           <input
             aria-hidden="true"
             tabindex="-1"

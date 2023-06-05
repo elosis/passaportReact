@@ -16,6 +16,7 @@ export default function PasProvider(props) {
   const [passaport, setPassaport] = useState("");
   const [salary, setSalary] = useState("");
   const [submitted, setSubmitted] = useState(false);
+  const [row, setRow] = useState(5);
 
   const handleReset = () => {
     setFirstName("");
@@ -27,6 +28,11 @@ export default function PasProvider(props) {
     setTitle("Mr");
     setPassaport("");
     setSalary("");
+  };
+
+  const handleRow = (event) => {
+    const value = event.target.value;
+    setRow(value);
   };
 
   const handleTitleChange = (event) => {
@@ -196,6 +202,9 @@ export default function PasProvider(props) {
     birthday,
     setBirthday,
     handleDelete,
+    row,
+    setRow,
+    handleRow,
   };
 
   return (
