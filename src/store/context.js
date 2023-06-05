@@ -31,8 +31,26 @@ export default function PasProvider(props) {
   };
 
   const handleRow = (event) => {
-    const value = event.target.value;
-    setRow(value);
+    const selectedRow = event.target.value;
+    setRow(selectedRow);
+
+    // Update the user list based on the selected row value
+    const targetCount = parseInt(selectedRow, 10);
+    const emptyDivCount = targetCount - users.length;
+    if (emptyDivCount > 0) {
+      const emptyDivs = Array.from({ length: emptyDivCount }, (_, index) => ({
+        id: index + 1,
+        firstName: "",
+        lastName: "",
+        gender: "",
+        phone: "",
+        nationality: "",
+      }));
+      setUsers([...users, ...emptyDivs]);
+    } else if (emptyDivCount < 0) {
+      const slicedUsers = users.slice(0, targetCount);
+      setUsers(slicedUsers);
+    }
   };
 
   const handleTitleChange = (event) => {

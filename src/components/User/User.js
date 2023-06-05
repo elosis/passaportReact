@@ -19,6 +19,7 @@ export default function User() {
     row,
     handleRow,
   } = useContext(PasContext);
+
   return (
     <div>
       <div className="user-container">
@@ -48,26 +49,30 @@ export default function User() {
                 <div className="user-info-phone">{user.phone}</div>
                 <div className="user-info-nationality">{user.nationality}</div>
                 <div className="edit-con">
-                  <button
-                    className="submit-edit"
-                    onClick={() => {
-                      setSelectedGender(user.gender);
-                      setFirstName(user.firstName);
-                      setLastName(user.lastName);
-                      setPhone(user.phone);
-                      setNationality(user.nationality);
-                      setBirthday(user.birthday);
-                      setTitle(user.title);
-                      setCitizen(user.citizen);
-                      setSalary(user.salary);
-                      setPassaport(user.passaport);
-                    }}
-                  >
-                    <span className="submit-edit-label">EDIT</span>
-                  </button>
-                  <button className="undo-cancel" onClick={handleDelete}>
-                    <span className="undo-cancel-label">DELETE</span>
-                  </button>
+                  {user.firstName && (
+                    <>
+                      <button
+                        className="submit-edit"
+                        onClick={() => {
+                          setSelectedGender(user.gender);
+                          setFirstName(user.firstName);
+                          setLastName(user.lastName);
+                          setPhone(user.phone);
+                          setNationality(user.nationality);
+                          setBirthday(user.birthday);
+                          setTitle(user.title);
+                          setCitizen(user.citizen);
+                          setSalary(user.salary);
+                          setPassaport(user.passaport);
+                        }}
+                      >
+                        <span className="submit-edit-label">EDIT</span>
+                      </button>
+                      <button className="undo-cancel" onClick={handleDelete}>
+                        <span className="undo-cancel-label">DELETE</span>
+                      </button>
+                    </>
+                  )}
                 </div>
               </div>
             </div>
