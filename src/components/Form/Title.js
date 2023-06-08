@@ -22,6 +22,7 @@ export default function Title() {
           id="gender"
           value={title}
           onChange={handleTitleChange}
+          className="input-area"
         >
           <option value="Mr">Mr</option>
           <option value="Ms">Ms</option>
@@ -35,7 +36,9 @@ export default function Title() {
           name="first-name"
           value={firstName}
           onChange={handleFirstNameChange}
-          className={submitted && firstName === "" ? "error" : ""}
+          className={`input-area ${
+            submitted && firstName === "" ? "error" : ""
+          }`}
         />
         {submitted && firstName === "" && (
           <p className="error-message">First Name is required.</p>
@@ -49,7 +52,9 @@ export default function Title() {
           name="last-name"
           value={lastName}
           onChange={handleLastNameChange}
-          className={submitted && lastName === "" ? "error" : ""}
+          className={`input-area ${
+            submitted && lastName === "" ? "error" : ""
+          }`}
         />
         {submitted && lastName === "" && (
           <p className="error-message">Last Name is required.</p>

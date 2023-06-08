@@ -68,7 +68,10 @@ export default function User() {
                       >
                         <span className="submit-edit-label">EDIT</span>
                       </button>
-                      <button className="undo-cancel" onClick={handleDelete}>
+                      <button
+                        className="undo-cancel"
+                        onClick={() => handleDelete(user.id)}
+                      >
                         <span className="undo-cancel-label">DELETE</span>
                       </button>
                     </>

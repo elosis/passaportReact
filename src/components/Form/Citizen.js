@@ -13,6 +13,7 @@ export default function Citizen() {
           type="text"
           value={citizen}
           onChange={handleCitizenChange}
+          className="input-area"
         />
       </div>
     </div>

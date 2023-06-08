@@ -19,7 +19,9 @@ export default function BirthNation() {
           type="date"
           value={birthday}
           onChange={handleBirthdayChange}
-          className={submitted && birthday === "" ? "error" : ""}
+          className={`input-area ${
+            submitted && birthday === "" ? "error" : ""
+          }`}
         />
         {submitted && birthday === "" && (
           <p className="error-message">Birthday is required.</p>
@@ -30,7 +32,7 @@ export default function BirthNation() {
         <select
           id="country"
           name="country"
-          class="form-control"
+          class="input-area form-control"
           value={nationality}
           onChange={handleNationalityChange}
         >

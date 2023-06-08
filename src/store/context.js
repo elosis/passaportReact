@@ -121,9 +121,14 @@ export default function PasProvider(props) {
     setUsers((prevUsers) => [...prevUsers, user]);
   };
 
-  const handleDelete = () => {
-    const updatedUsers = users.filter((user) => user.id !== user.id);
-    setUsers(updatedUsers);
+  const handleDelete = (userId) => {
+    const userIndex = users.findIndex((user) => user.id === userId);
+
+    if (userIndex !== -1) {
+      const updatedUsers = [...users];
+      updatedUsers.splice(userIndex, 1);
+      setUsers(updatedUsers);
+    }
   };
 
   const handleSubmit = (event) => {

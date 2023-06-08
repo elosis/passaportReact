@@ -1,3 +1,7 @@
+body {
+  font-family: calibri;
+}
+
 .form-subcontainer {
   display: flex;
   flex-direction: column;
@@ -81,6 +85,7 @@
 .mobile-number {
   display: flex;
   gap: 5px;
+  align-items: center;
 }
 
 .mobile-phone {
@@ -89,6 +94,7 @@
 
 .birth-nation {
   display: flex;
+  align-items: center;
   gap: 12px;
 }
 
@@ -115,10 +121,12 @@
 .salary-con {
   display: flex;
   gap: 12px;
+  align-items: center;
 }
 
 .nationality {
   display: flex;
+  align-items: center;
 }
 
 .user-info {
@@ -141,7 +149,7 @@
   color: #f50057;
   border: 1px solid #f50057;
   background-color: #ffffff;
-  height: 28px;
+  height: 45px;
 }
 
 .undo-cancel-label {
@@ -168,7 +176,7 @@
   color: #3f51b5;
   border: 1px solid rgba(63, 81, 181, 0.5);
   background-color: #ffffff;
-  height: 28px;
+  height: 45px;
 }
 
 .submit-edit-label {
@@ -408,4 +416,10 @@
   margin-top: 0px;
   margin-bottom: 0px;
   margin-left: 132px;
+}
+
+.input-area {
+  padding: 14.5px 10px;
+  border-radius: 4px;
+  text-align: center;
 }

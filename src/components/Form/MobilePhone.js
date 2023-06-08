@@ -8,7 +8,7 @@ export default function MobilePhone() {
   const { phone, handlePhoneChange, submitted } = useContext(PasContext);
   return (
     <div className="phone-con">
-      <div>
+      <div className="mobile-number">
         <div className="mobile-number">
           <div className="mobile-phone">Mobile Phone: </div>
           <div className="star">*</div>
@@ -17,7 +17,7 @@ export default function MobilePhone() {
           country={"us"} // Default country
           value={phone}
           onChange={handlePhoneChange}
-          className={submitted && phone === "" ? "error" : ""}
+          className={`input-area ${submitted && phone === "" ? "error" : ""}`}
         />
         {submitted && phone === "" && (
           <p className="error-message">Phone is required.</p>

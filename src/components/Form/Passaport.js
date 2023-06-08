@@ -12,7 +12,7 @@ export default function Passaport() {
           type="number"
           value={passaport}
           onChange={(event) => setPassaport(event.target.value)}
-          className="passaport-input"
+          className="input-area passaport-input"
         />
       </div>
     </div>

@@ -15,7 +15,7 @@ export default function Salary() {
           onChange={handleSalaryChange}
           step=".01"
           placeholder="X.XXX.XXX,XX"
-          className={submitted && salary === "" ? "error" : ""}
+          className={`input-area ${submitted && salary === "" ? "error" : ""}`}
         />
         {submitted && salary === "" && (
           <p className="error-message">Salary is required.</p>
