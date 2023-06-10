@@ -38,18 +38,47 @@ body {
   margin-bottom: 20px;
 }
 
-.user-info-name {
+.user-info-name-1 {
   margin-left: 15px;
+}
+
+.user-info-name-2 {
+  margin-left: 15px;
+  width: 200px;
 }
 
 .passaport-input {
   margin-left: 6px;
 }
 
-.user-info-deep-con {
+.user-info-gender {
+  margin-left: -15px;
+  width: 50px;
+}
+
+.user-info-phone {
+  margin-left: 13px;
+  width: 120px;
+}
+
+.user-info-nationality {
+  margin-left: -6px;
+  width: 238px;
+}
+
+.user-info-deep-con-1 {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-left: 200px;
+  gap: 120px;
+}
+
+.user-info-deep-con-2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 60px;
   gap: 120px;
 }
 

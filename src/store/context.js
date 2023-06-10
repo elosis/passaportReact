@@ -59,12 +59,16 @@ export default function PasProvider(props) {
 
   const handleFirstNameChange = (event) => {
     const value = event.target.value;
-    setFirstName(value);
+    if (value.length <= 15) {
+      setFirstName(value);
+    }
   };
 
   const handleLastNameChange = (event) => {
     const value = event.target.value;
-    setLastName(value);
+    if (value.length <= 15) {
+      setLastName(value);
+    }
   };
 
   const handleNameChange = (event) => {
@@ -78,16 +82,23 @@ export default function PasProvider(props) {
 
   const handlePhoneChange = (event) => {
     const value = event.target.value;
-    setPhone(value);
+    if (value.length <= 13) {
+      setPhone(value);
+    }
   };
 
   const handleSalaryChange = (event) => {
     const value = event.target.value;
-    setSalary(value);
+    if (value.length <= 13) {
+      setSalary(value);
+    }
   };
 
   const handlePassaportChange = (event) => {
-    setPassaport(event.target.value);
+    const value = event.target.value;
+    if (value.length <= 11) {
+      setPassaport(value);
+    }
   };
 
   const handleCitizenChange = (event) => {
@@ -168,20 +179,6 @@ export default function PasProvider(props) {
     setSalary("");
     setBirthday("");
   };
-
-  // const formatNumber = (value) => {
-  //   if (value === "") {
-  //     return "";
-  //   }
-  //   const number = parseFloat(value.replace(/[^0-9.]/g, ""));
-  //   if (isNaN(number)) {
-  //     return "";
-  //   }
-  //   return number.toLocaleString("en-US", {
-  //     minimumFractionDigits: 2,
-  //     maximumFractionDigits: 2,
-  //   });
-  // };
 
   const data = {
     title,

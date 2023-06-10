@@ -28,11 +28,11 @@ export default function User() {
           <div className="usernames">
             <div className="user-info">
               <input type="checkbox" value="" />
-              <div className="user-info-name">NAME</div>
-              <div className="user-info-deep-con">
-                <div className="user-info-gender">GENDER</div>
-                <div className="user-info-phone">MOBILE PHONE</div>
-                <div className="user-info-nationality">NATIONALITY</div>
+              <div className="user-info-name-1">NAME</div>
+              <div className="user-info-deep-con-1">
+                <div>GENDER</div>
+                <div>MOBILE PHONE</div>
+                <div>NATIONALITY</div>
               </div>
             </div>
           </div>
@@ -41,10 +41,10 @@ export default function User() {
           <div key={index} className="usernames">
             <div className="user-info">
               <input type="checkbox" value="" />
-              <div className="user-info-name">
+              <div className="user-info-name-2">
                 {user.firstName} {user.lastName}
               </div>
-              <div className="user-info-deep-con">
+              <div className="user-info-deep-con-2">
                 <div className="user-info-gender">{user.gender}</div>
                 <div className="user-info-phone">{user.phone}</div>
                 <div className="user-info-nationality">{user.nationality}</div>
