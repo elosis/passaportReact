@@ -110,6 +110,7 @@ body {
 .submit-con {
   display: flex;
   gap: 12px;
+  align-items: center;
 }
 
 .edit-con {
