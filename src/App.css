@@ -132,6 +132,7 @@ body {
 
 .user-info {
   display: flex;
+  align-items: center;
 }
 
 .undo-cancel {
